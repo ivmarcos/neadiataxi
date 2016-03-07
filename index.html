@@ -3,13 +3,161 @@
 
 <head>
 
+<title>Neadiataxi</title>
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
 
 <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">	
+
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css">	
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">	
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">	
+
+<style>
+	body{
+		background-color : white;
+	}
+	.sidebar{
+		background-color : blue;
+		height : 100%;
+	}
+	.main{
+		background-color : red;
+	}
+	.mapa{
+		background-color : gray;
+	}
+	.noticia.imagem{
+		max-width: 50%;
+		height: 100px;
+		border-radius : 4px;
+		background-color : black;
+	}
+	.noticia.conteudo{
+		width : 50%;
+	}
+</style>
 
 
 </head>
 
 <body>
+
+<!-- NAVEGAÇÃO SUPERIOR -->
+<nav class="navbar navbar-default">
+
+	<div class="container-fluid">
+	
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="#">
+			Titulo
+		  </a>
+		</div>
+	
+	</div>
+	
+</nav>
+
+<div class="container-fluid">
+
+	<div class="row">
+
+		<!-- NAVEGAÇÃO LATERAL - SIDEBAR -->
+		<div class="col-md-2 sidebar"> 
+		
+			<h1>Teste</h1>
+
+		</div>
+	
+	
+		<div class="col-md-10">
+			
+			<div class="row">
+
+				<div class="col-md-8 main">
+					
+					<h4><i class="fa fa-user"></i>	NOTÍCIAS</h>
+				
+					<div class="row">
+				
+						<div class="col-md-12">
+						
+							<h1>Notícia Principal</h1>
+							
+							<button class="btn btn-default btn-raised">Mais Notícias</button>
+							
+							
+						</div>
+					
+					</div>
+					
+					<div class="row">
+					
+						<div class="col-md-6">
+						
+							<h4>CATEGORIA</h4>
+							<h2>Exemplo de Notícia 2</h2>
+							
+							
+						</div>
+						
+						<div class="col-md-6">
+							
+							<h4>CATEGORIA</h4>
+							<h2>Exemplo de Notícia 3</h2>
+							
+						</div>
+					
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+				
+					<div class="row">
+					
+						<div class="col-md-12">
+						
+							<h1>Módulo 2</h1>
+							
+						</div>
+						
+					</div>
+
+					<div class="row">
+					
+						<div class="col-md-12">
+						
+							<h1>Módulo 3</h1>
+							
+						</div>
+						
+					</div>
+				
+				</div>
+				
+			</div>
+			
+			<div class="row mapa">
+			
+				<h1>Mapa</h1>
+			
+			</div>
+		 
+		</div>
+	
+	</div>
+	
+	
+</div>
+
+
+<script src="js/angular/1.5.0/angular.min.js"></script>
+<script src="js/angular/1.5.0/angular.min.js"></script>
+
+<script src="app/js/portalApp.js"></script>
+<script src="app/js/controller/portal.js"></script>
 
 
 </body>
