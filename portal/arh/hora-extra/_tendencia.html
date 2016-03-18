@@ -1,0 +1,38 @@
+<div class="col-md-9">
+
+	<div id="graficoTendencia"></div>
+	
+</div>
+
+
+<div class="col-md-3">
+
+	<table class="table table-condensed legenda">
+	
+		<thead>
+		
+			<tr>
+				<td colspan="2">
+					ITEM
+				</td>
+			</tr>
+			
+		</thead>
+		<tbody>
+			
+			<tr ng-repeat="t in tipos">
+				<td style="width: 10px">
+					<i class="fa fa-square" ng-style="{'color' : cores[$index]}"></i>
+				</td>
+				
+				<td>
+					{{t}}
+				</td>
+				
+			</tr>
+			
+		</tbody>
+		
+	</table>
+	
+</div>

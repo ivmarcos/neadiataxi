@@ -1,0 +1,66 @@
+<div class="col-md-9">
+
+	<div id="graficoComparativo"></div>
+
+</div>
+
+
+
+<div class="col-md-3">
+
+	<table class="table table-condensed legenda">
+	
+		<thead>
+		
+			<tr>
+				<td colspan="2">
+					ITEM
+				</td>
+				<td>
+					QTD
+				</td>
+				<td>
+					%
+				</td>
+			</tr>
+			
+		</thead>
+		<tbody>
+			
+			<tr ng-repeat="i in itens">
+				<td style="width: 10px">
+					<i class="fa fa-square" ng-style="{'color' : cores[$index]}"></i>
+				</td>
+				
+				<td>
+					{{i.label}}
+				</td>
+				
+				<td class="text-center">
+					{{i.quantidade | currency : "" : 2}}
+				</td>
+
+				<td class="text-center">
+					{{(i.quantidade / total * 100).toFixed(2) | currency : "" : 2}}%
+				</td>
+			</tr>
+			
+		</tbody>
+		<tfoot>
+			<tr>
+			
+				<td colspan="2">
+					TOTAL
+				</td>
+				<td>
+					{{total.toFixed(2) | currency : "" : 2}}
+				</td>
+				<td>
+					100%
+				</td>
+			</tr>
+		</tfoot>
+		
+	</table>
+	
+</div>

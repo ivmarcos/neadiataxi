@@ -1,0 +1,27 @@
+<usi-slide></usi-slide>
+
+<style>
+	.subsecao{
+		margin-top : 0px;
+	}
+</style>
+
+<h1 class="page-header">
+	<i class="fa fa-group usi-icone-app"></i>
+	Gestão Administrativa
+</h1>
+
+<br />
+
+<ul class="nav nav-tabs">
+	<li ng-class="{active : ('arh.estrutura' | routeSegmentStartsWith) }">
+		<a href="#{{'arh.estrutura' | routeSegmentUrl}}">Estrutura</a>
+	<li>
+	<li ng-class="{active : ('arh.horaExtra' | routeSegmentStartsWith) }">
+		<a href="#{{'arh.horaExtra' | routeSegmentUrl}}">Horas Extras</a>
+	<li>	
+</ul>
+
+<br />
+
+<div app-view-segment="1"></div>

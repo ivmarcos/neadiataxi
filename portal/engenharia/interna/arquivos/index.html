@@ -1,0 +1,126 @@
+﻿<!doctype html>
+
+<html lang="pt" ng-app="engitnaApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portal USI - Unidade Servicos em Infraestrutura">
+<meta name="author" content="USI - Divisao de Monitoramento">
+
+<title>Portal USI - PPA - Material de Apoio</title>
+
+<!-- build:css /assets/css/portal/engenharia/interna/arquivos.css -->
+
+<link href="../../../../css/bootstrap-3.2.0.min.css" rel="stylesheet">
+<link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../../../css/angular-growl.min.css" rel="stylesheet">
+
+<link href="../../../../portal/css/portal.css" rel="stylesheet">
+<link href="../../../../portal/css/slide.css" rel="stylesheet">
+
+<!-- endbuild -->
+
+<!-- @if DEBUG -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<!-- @endif -->
+
+
+</head>
+
+<body >
+
+	<usi-loader></usi-loader>
+	
+	<div id="wrapper">
+
+		<ng-include src="'/portal/_nav.html'"></ng-include>
+
+
+			<div class="container-fluid">
+			
+				
+				<usi-slide></usi-slide>
+		
+				<h1 class="page-header"><i class="fa fa-files-o"></i> Arquivos</h1>
+				<h3 class="text-muted" style="margin-top: -10px">Engenharia Interna</h3>
+				
+				<br/>
+				
+				<ul class="nav nav-tabs">
+					
+					<li ng-class="{active : ('restrito' | routeSegmentEqualsTo) }" ng-if="perfil.restrito">
+						<a href="#{{ 'restrito' | routeSegmentUrl }}">Restritos </a>
+					<li>
+					
+					<li ng-class="{active : ('cadastro' | routeSegmentStartsWith) }" ng-if="perfil.admin">
+						<a href="#{{ 'cadastro' | routeSegmentUrl }}">Cadastro </a>
+					<li>
+				</ul>
+
+
+				<div class="anim" app-view-segment="0"></div>
+				
+			</div>
+
+	</div>
+
+<!-- 	build:js /assets/js/portal/engenharia/interna/arquivos.js -->
+
+	<script src="../../../../js/jquery/jquery-2.1.1.min.js"></script>
+	<script src="../../../../js/bootstrap-3.1.1.min.js"></script>
+	
+	<script src="../../../../js/angular/angular-file-upload-shim.min.js"></script>
+	<script src="../../../../js/angular/angular-1.3.15.min.js"></script>
+	<script src="../../../../js/angular/angular-resource-1.3.15.min.js"></script>
+	<script src="../../../../js/angular/angular-route-1.3.15.min.js"></script>
+	<script src="../../../../js/angular/angular-animate-1.3.15.min.js"></script>
+	<script src="../../../../js/angular/angular-locale_pt-br.js"></script>
+	<script src="../../../../js/angular/angular-growl.min.js"></script>
+	<script src="../../../../js/angular/angular-cookie.min.js"></script>
+	<script src="../../../../js/angular/angular-cache.min.js"></script>
+	<script src="../../../../js/angular/angular-route-segment.min.js"></script>
+	<script src="../../../../js/angular/angular-file-upload.min.js"></script>
+	<script src="../../../../js/angular/angular-filter.min.js"></script>
+	<script src="../../../../js/angular/ng-infinite-scroll.min.js"></script>
+	<script src="../../../../js/angular/ui-bootstrap-tpls-0.13.0.min.js"></script>
+
+	<script src="../../../../portal/js/portalApp.js"></script>
+	
+	<script src="../../../../portal/js/interceptor/interceptor.js"></script>
+
+	<script src="../../../../portal/js/controller/portal.js"></script>
+	
+	<script src="../../../../portal/js/factory/autorizacao.js"></script>
+	<script src="../../../../portal/js/factory/usuario.js"></script>
+	<script src="../../../../portal/js/factory/sessao.js"></script>
+	<script src="../../../../portal/js/factory/loader.js"></script>
+	
+	<script src="../../../../portal/js/directive/component/usiSlide.js"></script>
+	<script src="../../../../portal/js/directive/component/usiLoader.js"></script>
+	<script src="../../../../portal/js/directive/component/usiPesquisa.js"></script>
+	
+	<script src="../../../../portal/engenharia/interna/arquivos/js/engitnaApp.js"></script>
+	
+	<script src="../../../../portal/engenharia/interna/arquivos/js/factory/arquivo.js"></script>
+	<script src="../../../../portal/engenharia/interna/arquivos/js/factory/categoria.js"></script>
+	<script src="../../../../portal/engenharia/interna/arquivos/js/factory/perfil.js"></script>
+	<script src="../../../../portal/engenharia/interna/arquivos/js/factory/restricao.js"></script>
+	<script src="../../../../portal/engenharia/interna/arquivos/js/factory/acesso.js"></script>
+
+	<script src="../../../../portal/engenharia/interna/arquivos/js/filter/restricao.js"></script>
+	
+	<script src="../../../../portal/engenharia/interna/arquivos/js/controller/lista.js"></script>
+	
+	<script src="../../../../portal/engenharia/interna/arquivos/js/controller/cadastro/arquivo/edicao.js"></script>
+	<script src="../../../../portal/engenharia/interna/arquivos/js/controller/cadastro/arquivo/lista.js"></script>
+	<script src="../../../../portal/engenharia/interna/arquivos/js/controller/cadastro/categoria/edicao.js"></script>
+	<script src="../../../../portal/engenharia/interna/arquivos/js/controller/cadastro/categoria/lista.js"></script>
+	<script src="../../../../portal/engenharia/interna/arquivos/js/controller/cadastro/acesso/lista.js"></script>
+	
+	
+
+<!-- endbuild -->
+</body>
+
+</html>

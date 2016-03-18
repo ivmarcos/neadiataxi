@@ -1,0 +1,253 @@
+@import (reference) "funcoes";
+@import (reference) "transicoes";
+
+//Definições globais do portal
+@azulbb: #0038A8;
+@amarelobb: #F9DD16;
+@azul: @azulbb;
+@amarelo: @amarelobb;
+@branco: #ffffff;
+@preto: #000000;
+@corBaseHeader: #1d365d;
+@corBaseFonte: #b9c8e0;
+@corBackgroundHeader: @corBaseHeader;
+//@corBackgroundSidebar: #2F3744;
+@corBackgroundSidebar: #051F35;
+@corFonteHeader: @corBaseFonte;
+@corFonteSidebar: @corFonteHeader;
+@corBackgroundBody: @branco; 
+@alturaHeader: 50px;
+
+body{
+    background-color: @corBackgroundBody;
+}
+
+.circular{
+    border-radius: 50%;
+}
+
+.centro{
+    text-align: center;
+}
+
+.avatar{ 
+    height: 40px;
+    .circular;
+}
+
+.avatar-header{
+    margin-top: 5px;
+}
+
+.link {
+	cursor : pointer;
+}
+
+#wrapper {
+    position: absolute;
+    width: 100%;
+    .transicao-ease;
+}
+
+#content-wrapper {
+    width: 100%;
+    padding-left: 250px;
+    margin-top: @alturaHeader;
+    @media  (max-width:768px) {
+        padding-left: 0px;
+        .transicao-ease;
+    }
+    @media print {
+        padding: 0px !important;
+    }
+    //.transicao-ease;
+}
+
+//Definições do menu de navegação superior
+
+#usiHeader{
+    background-color: @corBackgroundHeader;
+    border-color: darken(@corBackgroundHeader, 5%);
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    a{
+        color: @corFonteHeader;
+        &:hover{
+            background-color: lighten(@corBackgroundHeader, 5%);
+            color: white;
+        }
+    }
+    .open{
+        a{
+            background-color: lighten(@corBackgroundHeader, 5%);
+        }
+        .dropdown-menu{
+            background-color: white;
+            a{
+                background-color: white;
+                color: lighten(black, 5%);
+                &:hover{
+                    background-color: darken(white, 5%);
+                }
+            }
+        }
+    }
+    .usi-menu-responsivo{
+        .icon-bar{
+            border: 1px solid @corFonteHeader;
+        }
+    }
+}
+
+// Definições do painel lateral
+
+#sidebar-wrapper {
+    margin-top: @alturaHeader;
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: @corBackgroundSidebar;
+    @media  (max-width:768px) {
+        width: 0px;
+    }
+    @media print {
+        width: 0px !important;
+    }
+    .transicao-ease;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #95A0B2;
+    li{
+        text-indent: 10px;
+        line-height: 40px;
+        &.active{
+            text-decoration: none;
+            background-color: lighten(@corBackgroundSidebar, 10%);
+            a{
+                color: lighten(@corFonteSidebar, 20%);
+    			border-left : 4px solid #36AAF0 !important;
+            }
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            color: #95A0B2;
+			border-left : 4px solid @corBackgroundSidebar;
+            &:hover{
+                text-decoration: none;
+                color: lighten(@corFonteSidebar, 20%);
+                background-color: lighten(@corBackgroundSidebar, 10%);
+				border-left : 4px solid white;
+            }
+            &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+    
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    //color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+
+// Uso geral
+
+.usi-header.usi-icone{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.usi-error{
+	color: #a94442;
+}
+
+.usi-input-centro{
+    display: block;
+    margin: 0 auto;
+}
+
+.usi-modal-fecha{
+    margin-top: -10px;
+}
+
+/* Ajustes específicos */
+
+
+//Animações do angular
+
+fade{
+  .transicao-ease;
+  opacity : 1.0;
+}
+fade.ng-leave {
+    display: none;
+}
+fade.ng-hide{
+    opacity : 0;
+}
+
+//Componentes
+
+#loader {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1100;
+   width: 100px;
+   margin : auto;
+   height : 100px;
+   &.blocking{
+        width : auto;
+        margin : inherit;
+        height : auto;
+   } 
+   /*background-color: white;
+   opacity: .6;*/
+}
+
+#ajaxLoader {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -32px; /* -1 * image width / 2 */
+   margin-top: -32px; /* -1 * image height / 2 */
+   display: block;
+}
+
+// Ajustes específicos
+
+//remove a borda do firefox
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+.input-centro{
+    display: block;
+    margin: 0 auto;
+}
+

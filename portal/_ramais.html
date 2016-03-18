@@ -1,0 +1,20 @@
+<h1 class="page-header" style="margin-top : 70px;">
+	Ramais
+</h1>
+
+<usi-pesquisa ng-model="pesquisa"></usi-pesquisa>
+
+<div ng-repeat="u in usuarios | filter : pesquisa">
+
+	
+		<div>
+		
+			<a href="http://connections.bb.com.br/profiles/html/profileView.do?uid={{u.id}}&lang=pt_br" target="_blank" >
+				<img ng-src="http://connections.bb.com.br/profiles/photo.do?uid={{u.id}}" alt="" class="img-circle" popover-trigger="mouseenter"/>
+			</a>
+			
+		</div>
+	{{u.nome}}
+	{{u.telefone}}
+
+</div>

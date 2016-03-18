@@ -1,0 +1,42 @@
+<meta content="text/html; charset=UTF-8">
+
+
+<div class="modal-header">
+
+	<h4 class="modal-title">Em gravação</h4>
+	
+	<button type="button" class="close pull-right" style="margin-top : -25px" aria-hidden="true" ng-click="fecha()">&times;</button>
+	
+</div>
+
+<div class="modal-body">
+
+	<form name="formGravacao">
+
+		<div class="form-group">
+			<label>Dependência</label>
+			<br/>
+			<span>{{dado.PRF_DEPE + ' - ' + dado.NM_DEPE}}</span>
+		</div>
+
+		<div class="form-group">
+		
+			<label>Comissão</label>
+			<br/>
+			<span>{{dado.CD_CMSS + ' - ' + dado.NM_CMSS}}</span>
+		
+		</div>
+		
+		<div class="form-group">
+			<label>Quantidade</label> 
+			<input type="number" min="0" class="form-control"	required ng-model="gravacao.quantidade" />
+		</div>
+
+	</form>
+
+</div>
+
+<div class="modal-footer">
+	<a class="btn btn-primary" ng-click="salva()" ng-disabled="formNivel.$invalid"><i class="fa fa-floppy-o"></i>&nbspSalvar</a> 
+	<a	class="btn btn-warning" ng-click="fecha()"><i class="fa fa-remove"></i>&nbspCancelar</a>
+</div>

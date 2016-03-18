@@ -1,0 +1,125 @@
+<!doctype html>
+
+<html lang="pt" ng-app="curriculoApp">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Portal USI - Unidade Servicos em Infraestrutura">
+	<meta name="author" content="USI - Divisao de Monitoramento">
+
+	<title>Portal USI - Unidade Serviços em Infraestrutura</title>
+
+	<!-- build:css /assets/css/cur.css -->
+
+	<link href="../../css/jquery/jquery-ui.min.css" rel="stylesheet">
+	<link href="../../css/bootstrap/bootstrap-3.3.6.min.css" rel="stylesheet">
+	<link href="../../css/bootstrap/dropdowns-enhancement.min.css" rel="stylesheet">
+	<link href="../../css/font-awesome.min.css" rel="stylesheet">
+	<link href="../../css/angular/angular-growl.min.css" rel="stylesheet">
+	<link href="../../portal/css/portal.css" rel="stylesheet">
+	<link href="../../portal/css/slide.css" rel="stylesheet">
+
+	<!-- endbuild -->
+
+	<!-- @if DEBUG -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<!-- @endif -->
+
+	<style>	
+		.secao{
+			margin-top : 50px;
+		}
+		.slide{
+			height : 150px;
+			border-bottom : 1px solid gray;
+		}
+	</style>
+	
+	
+</head>
+
+<body >
+
+	<usi-route-title></usi-route-title>
+	
+	<div id="wrapper">
+
+		<ng-include src="'/portal/_nav.html'"></ng-include>
+
+		<div class="container-fluid">
+			
+			<div class="anim" app-view-segment="0"></div>
+			
+		</div>
+
+		<usi-loader></usi-loader>
+		
+	</div>
+
+<!-- 	build:js /assets/js/cur.js -->
+
+	<script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+	<script src="../../js/jquery/jquery.floatThead.min.js"></script>
+	
+	<script src="../../js/bootstrap/bootstrap-3.3.6.min.js"></script>
+	<script src="../../js/bootstrap/dropdowns-enhancement.js"></script>
+	
+	<script src="../../js/jqplot/jquery.jqplot.min.js"></script>
+	<script src="../../js/jqplot/jqplot.pieRenderer.min.js"></script>
+	<script src="../../js/jqplot/jqplot.barRenderer.min.js"></script>
+    <script src="../../js/jqplot/jqplot.categoryAxisRenderer.min.js"></script>
+	<script src="../../js/jqplot/jqplot.cursor.min.js"></script>
+    <script src="../../js/jqplot/jqplot.pointLabels.min.js"></script>
+    <script src="../../js/jqplot/jqplot.enhancedLegendRenderer.min.js"></script>
+	<script src="../../js/jqplot/jqplot.highlighter.min.js"></script>
+	<script src="../../js/jqplot/jqplot.dateAxisRenderer.min.js"></script>
+	<script src="../../js/jqplot/jqplot.canvasTextRenderer.min.js"></script>
+	<script src="../../js/jqplot/jqplot.canvasAxisTickRenderer.min.js"></script>
+	<script src="../../js/jqplot/jqplot.canvasAxisLabelRenderer.min.js"></script>
+	<script src="../../js/jqplot/jqplot.canvasOverlay.min.js"></script>
+	
+	<script src="../../js/angular/1.5.0/angular.min.js"></script>
+	<script src="../../js/angular/1.5.0/angular-resource.min.js"></script>
+	<script src="../../js/angular/1.5.0/angular-route.min.js"></script>
+	<script src="../../js/angular/1.5.0/angular-animate.min.js"></script>
+	<script src="../../js/angular/1.5.0/angular-cookie.min.js"></script>
+	<script src="../../js/angular/1.5.0/angular-cache.min.js"></script> 
+	<script src="../../js/angular/angular-file-upload-shim.min.js"></script>
+	<script src="../../js/angular/ui-bootstrap-tpls-1.1.1.min.js"></script>
+	<script src="../../js/angular/angular-locale_pt-br.js"></script>
+	<script src="../../js/angular/angular-cache-4.5.0.min.js"></script> 
+	<script src="../../js/angular/angular-growl.min.js"></script>
+	<script src="../../js/angular/angular-route-segment.min.js"></script>
+	<script src="../../js/angular/angular-filter.min.js"></script>
+
+	<script src="../../portal/js/portalApp.js"></script>
+                    
+	<script src="../../portal/js/factory/autorizacao.js"></script>
+	<script src="../../portal/js/factory/sessao.js"></script>
+	<script src="../../portal/js/factory/usuario.js"></script>
+	<script src="../../portal/js/factory/loader.js"></script>
+	                
+	<script src="../../portal/js/controller/portal.js"></script>
+	                
+	<script src="../../portal/js/interceptor/interceptor.js"></script>
+                    
+	<script src="../../portal/js/directive/usiFloatThead.js"></script>
+                    
+	<script src="../../portal/js/directive/component/usiSlide.js"></script>
+	<script src="../../portal/js/directive/component/usiPesquisa.js"></script>
+	<script src="../../portal/js/directive/component/usiLoader.js"></script>
+	
+	<script src="js/curriculoApp.js"></script> 
+	
+	<script src="js/factory/blocoCurriculo.js"></script> 
+	<script src="js/factory/informacaoCurriculo.js"></script> 
+
+	<script src="js/controller/curriculo.js"></script> 
+	
+<!-- endbuild -->
+</body>
+
+</html>
