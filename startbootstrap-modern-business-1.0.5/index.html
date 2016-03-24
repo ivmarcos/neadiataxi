@@ -22,10 +22,11 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!--<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css">    
+    <link id="boostrapCSS" rel="stylesheet" type="text/css" href="#">    
+    <!--<link id="boostrapCSS" rel="stylesheet" type="text/css" href="../bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css">    
     <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap-material-design/dist/css/ripples.min.css">  
 
-	-->
+	
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,6 +35,26 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<style>
+.slide-img{
+    max-heigth: 1080;
+}
+.carousel-caption{
+    bottom: 50px;
+}
+.carousel-caption h1{
+    font-size : 40px;
+}
+.navbar.navbar-inverse {
+    background-color: #050D3C;
+}
+.text-primary {
+    color: #337ab7;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;;
+}
+</style>
 </head>
 
 <body>
@@ -81,6 +102,20 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Temas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" onclick="app.changeCSS(THEME.DEFAULT)">Tema 1</a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="app.changeCSS(THEME.DEFAULT)">Tema 2</a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="app.changeCSS(THEME.DEFAULT)">Tema 3</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
@@ -101,27 +136,28 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <!--<div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>-->
+                <div class="fill" style="background-image:url('img/roda.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Investimentos em Infraestrutura Privada</h2>
+                    <h1>Investimentos em Infraestrutura Privada</h1>
                 </div>
             </div>
             <div class="item active">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="fill" style="background-image:url('img/eng.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Serviços de Arquitetura e Engenharia Interna</h2>
+                    <h1>Serviços de Arquitetura e Engenharia Interna</h1>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="fill" style="background-image:url('img/aviao1.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Gestão Técnica e Operacional</h2>
+                    <h1>Gestão Técnica e Operacional</h1>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="fill" style="background-image:url('img/roda.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Gestão Administrativa dos Serviços</h2>
+                    <h1>Gestão Administrativa dos Serviços</h1>
                 </div>
             </div>
         </div>
@@ -415,6 +451,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
